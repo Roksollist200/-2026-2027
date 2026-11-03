@@ -13,7 +13,7 @@ public class InsulinGlucoseZoneThird {
     }
 
     public double dG_dt(double I, double G, double S, PatientParameters pp){
-        return -pp.getSigma() -pp.getMu() *(G- pp.getG_critical())  + S;
+        return -pp.getSigma() * I * G -pp.getMu() *(G- pp.getGCritical())  + S;
     }
 
 }

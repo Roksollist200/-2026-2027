@@ -15,18 +15,20 @@ public class PatientParameters {
 
     /**
      * Конструктор для создания профиля пациента с индивидуальными параметрами.
-     * @param alpha коэффициент отвечающий за чувствительность к глюкозе
-     * @param betta коэффициент отвечающий за утилизацию инсулина глюкозой
-     * @param gamma коэффициент отвечающий за выход глюкозы из печени
-     * @param sigma коэффициент отвечающий за влияние инсулина на утилизацию глюкозы
-     * @param mu коэффициент отвечающий за почечное выведение глюкозы
      */
-    public PatientParameters(double alpha,double betta,double gamma,double sigma,double mu){
+    public PatientParameters(double alpha, double betta, double gamma, double sigma, double mu) {
         this.alpha = alpha;
         this.betta = betta;
-        this.sigma = sigma;
         this.gamma = gamma;
+        this.sigma = sigma;
         this.mu = mu;
+    }
+
+    public double getGCritical() {
+        return G_critical;
+    }
+    public  double getG0() {
+        return G_0;
     }
 
     public double getAlpha() {
@@ -49,11 +51,5 @@ public class PatientParameters {
         return mu;
     }
 
-    public  double getG_critical() {
-        return G_critical;
-    }
 
-    public  double getG0() {
-        return G_0;
-    }
 }

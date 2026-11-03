@@ -11,7 +11,7 @@ public class InsulinGlucoseZoneFirst {
     }
 
     public double dG_dt(double I, double G, double S, PatientParameters pp){
-        return pp.getGamma() * (pp.getG0()-G)-pp.getSigma() * I * G;
+        return pp.getGamma() * (pp.getG0()-G)-pp.getSigma() * I * G + S;
     }
 
 
